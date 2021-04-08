@@ -42,3 +42,34 @@ users = User.create([
         interests:"Biography"
     }
 ])
+
+friends = Friend.create([
+    {
+
+    }
+])
+
+reviews = Review.create([
+    { user_id: users.first,
+      book_id: books.first,
+      avg_rating: 7,
+      comment: "This book was amazing"
+    }
+
+    { user_id: users.second,
+      book_id: books.second,
+      avg_rating: 2,
+      comment: "This book sucks"
+    }
+
+])
+
+booklist = BookList.create ([
+    { user_id: users.first,
+      book_id: books.first
+    }
+
+    { user_id: users.second,
+      book_id: books.second
+    }
+])
