@@ -44,8 +44,8 @@ users = User.create([
 ])
 
 friends = Friend.create([
-    {
-
+    { user_id: users.first,
+      friend_id: users.second
     }
 ])
 
@@ -64,7 +64,7 @@ reviews = Review.create([
 
 ])
 
-booklist = BookList.create ([
+booklists = BookList.create ([
     { user_id: users.first,
       book_id: books.first
     }
