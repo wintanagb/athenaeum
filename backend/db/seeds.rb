@@ -7,6 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+# require 'uri'
+# require 'net/http'
+# require 'openssl'
+
+# url = URI("https://book4.p.rapidapi.com/")
+
+# http = Net::HTTP.new(url.host, url.port)
+# http.use_ssl = true
+# http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+# request = Net::HTTP::Get.new(url)
+# request["x-rapidapi-key"] = 'cf015368demsh6bbc25980732003p182300jsn009d47728a3f'
+# request["x-rapidapi-host"] = 'book4.p.rapidapi.com'
+
+# response = http.request(request)
+# puts response.read_body
 books = Book.create([
     {   author:"J.K. Rowling",
         title:"Harry Potter and the Goblet of Fire",
